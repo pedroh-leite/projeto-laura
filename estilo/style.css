@@ -1,2 +1,150 @@
 @charset "UTF-8";
 
+@font-face{
+    font-family: 'friends';
+    src: url(../fonte/GABRWFFR.TTF) ;
+    font-weight: normal;
+}
+
+:root{
+    --preto: #000000;
+    --cinza-escuro: #1b1b1b;
+    --rosa: #F001DF;
+    --lilas: #DB64EB;
+    --fundo: #d3cfcf;
+    --branco: #ffffff;
+    
+    --fonte-friends: 'friends', sans-serif;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:  var(--fundo);
+    font-family: var(--fonte-padrao);
+}
+
+header{
+    background-color: var(--preto);    
+    text-align: center;
+    padding-top: 30px;
+}
+
+header>h1{
+    color:var(--lilas) ;
+    font-family: var(--fonte-friends);
+    font-weight: normal;
+    font-size: 3rem;
+    margin-bottom: 15px;    
+}
+
+header>p{
+    color: var(--branco);
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+nav.links{
+    background-color: var(--preto);
+    padding-bottom: 2px;
+    text-align: left;
+}
+
+nav a{
+    display: block;
+    background-color: var(--preto);
+    color: var(--branco);
+    font-weight: bolder;
+    border-radius: 2px;
+    margin: 0px;
+    padding: 10px;
+    text-decoration: none;
+    transition-duration: 0.5s
+    
+}
+
+nav a:hover{
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+main{
+    background-color: var(--branco);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.288);
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+main h2.titulo{
+    font-family: var(--fonte-friends);
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+main p{
+    line-height: 1.3rem;
+    text-align: justify;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+main img{
+    width: 90vw;
+    display: block;
+    margin: auto;
+}
+
+main strong{
+    color: var(--rosa
+    );
+}
+
+span#burger{
+    background-color: var(--preto);
+    display: block;
+    color: var(--branco);
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+span#burger:hover{
+    background-color:var(--cinza-escuro);
+    color: var(--branco);
+}
+
+menu>ul{
+    list-style-type: none;
+}
+
+menu{
+    display: none;
+}
+
+section.fim{
+    font-size: 1.2em;
+    padding-top: 10px;
+    text-align: center;
+}
+footer{
+    background-color: var(--preto);
+    font-size: 0.9em;
+    color: var(--branco);
+    text-align: center;
+    padding: 7px;
+}
+
+footer strong{
+    color: var(--lilas);
+}
