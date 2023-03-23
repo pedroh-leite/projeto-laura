@@ -6,10 +6,11 @@ const switchModal = () => {
     const actualStyle = modal.style.display
     if(actualStyle == "block") {
         modal.style.display = "none"
-    } else {
+    }else {
         modal.style.display = "block"
     }
-} 
+}
+ 
 
 const btn = document.querySelector(".modalBtn")
 btn.addEventListener("click", switchModal)
@@ -21,7 +22,8 @@ window.onclick = function(event) {
     }
 }
 
-//Modal do entenda um site
+
+//Modal do entenda o site
 const switchPopup = () => {
     const popup = document.querySelector(".popup");
     const estiloAtual = popup.style.display
