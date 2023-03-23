@@ -1,5 +1,6 @@
 'use strict';
 
+//Modal textinho
 const switchModal = () => {
     const modal = document.querySelector(".modal");
     const actualStyle = modal.style.display
@@ -17,5 +18,26 @@ window.onclick = function(event) {
     const modal = document.querySelector(".modal")
     if(event.target == modal){
         switchModal()
+    }
+}
+
+//Modal do entenda um site
+const switchPopup = () => {
+    const popup = document.querySelector(".popup");
+    const estiloAtual = popup.style.display
+    if(estiloAtual == "block") {
+        popup.style.display = "none"
+    } else {
+        popup.style.display = "block"
+    }
+} 
+
+const btnPopup = document.querySelector(".popupBtn")
+btnPopup.addEventListener("click", switchPopup)
+
+window.onclick = function(event) {
+    const popup = document.querySelector(".popup")
+    if(event.target == popup){
+        switchPopup()
     }
 }
