@@ -1,11 +1,21 @@
 'use strict';
 
-const btnText = document.querySelector(".popup");
+const switchModal = () => {
+    const modal = document.querySelector(".modal");
+    const actualStyle = modal.style.display
+    if(actualStyle == "block") {
+        modal.style.display = "none"
+    } else {
+        modal.style.display = "block"
+    }
+} 
 
-const closeText = function() {
-    console.log("link clicked");
-    popup.classList.remove("hidden");
+const btn = document.querySelector(".modalBtn")
+btn.addEventListener("click", switchModal)
+
+window.onclick = function(event) {
+    const modal = document.querySelector(".modal")
+    if(event.target == modal){
+        switchModal()
+    }
 }
-
-for(let i = 0; i < btnText; i++)
-    btnText[i].addEventListener("click", openText)
