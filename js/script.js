@@ -15,12 +15,12 @@ const switchModal = () => {
 const btn = document.querySelector(".modalBtn")
 btn.addEventListener("click", switchModal)
 
-window.onclick = function(event) {
+/*window.onclick = function(event) {
     const modal = document.querySelector(".modal")
     if(event.target == modal){
         switchModal()
     }
-}
+}*/
 
 
 //Modal do entenda o site
@@ -43,3 +43,16 @@ window.onclick = function(event) {
         switchPopup()
     }
 }
+
+const closeModalOrPopUp = () => {
+    window.onclick = function (event) {
+        
+        const popup = document.querySelector(".popup")
+        const modal = document.querySelector(".modal")
+        
+        if (event.target == popup) return switchPopup()
+        if (event.target == modal) return switchModal()      
+    }
+}
+
+closeModalOrPopUp()
